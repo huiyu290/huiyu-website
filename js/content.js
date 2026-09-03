@@ -40,7 +40,7 @@
     ukPhoto6: '关于我/环英旅行照6.JPG',
     ukPhoto7: '关于我/环英旅行照7.JPG',
     ukTripPdf: '关于我/英国🇬🇧.pdf',
-    subsidyImg: '关于我/定向补贴产品能力.png',
+    subsidyImg: '关于我/定向补贴产品能力.jpg',
     xhsImg: '关于我/小红书实习.JPG',
     gradPhoto: '教育/研究生主修课程/研究生毕业照.jpg'
   };
