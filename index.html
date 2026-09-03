@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yu's Universe</title>
+<meta name="description" content="Yu's Universe · 惠瑜个人求职网站：电商运营 / 市场营销方向，涵盖工作经历、项目经历、实习经历、教育背景与作品集。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff'/%3E%3Cstop offset='55%25' stop-color='%23a9c4f0'/%3E%3Cstop offset='100%25' stop-color='%233a5cc0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='26' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css?v=20260902e">
+</head>
+<body>
+<canvas id="galaxy" aria-label="旋转的银河系背景"></canvas>
+
+<div id="hint">悬停银河系 · 暂停并显示星球名&nbsp;&nbsp;|&nbsp;&nbsp;点击星球 · 查看内容</div>
+<button id="bgm-toggle" class="bgm-toggle" title="背景音乐" style="display:none;">🔇</button>
+<footer id="site-footer">19987200866 · huihuihuiyuyuyu@gmail.com</footer>
+
+<div id="panel-overlay" class="panel-overlay hidden">
+  <div class="panel" id="panel" role="dialog" aria-modal="true" aria-label="内容面板">
+    <button id="panel-close" class="panel-close" aria-label="关闭">✕</button>
+    <div id="panel-content"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<audio id="bgm" loop preload="auto"></audio>
+<noscript><div style="color:#fff;padding:40px;text-align:center;">请启用 JavaScript 以查看本站内容。</div></noscript>
+
+<script src="js/content.js?v=20260902f"></script>
+<script src="js/galaxy.js?v=20260902f"></script>
+<script src="js/bgm.js?v=20260902a"></script>
+</body>
+</html>

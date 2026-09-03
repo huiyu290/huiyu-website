@@ -1,0 +1,17 @@
+# 本地工具与临时文件（不部署到 GitHub）
+cloudflared.exe
+share-link.ps1
+start-server.js
+start-server.ps1
+一键分享.bat
+_audio_tmp/
+交接文档.md
+版本存档/
+网站风格示例/
+设计稿-视觉预览*.html
+惠瑜-个人简历9.1.pdf
+惠瑜-简历打磨版-工作经历在这里.docx
+惠瑜个人网站-建设方案.pptx
+运营_惠瑜-实习经历看这里.docx
+js/*.bak*
+css/*.bak*

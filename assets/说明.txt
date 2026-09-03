@@ -1,0 +1,36 @@
+背景音乐接入说明（2026-08-15 更新：已接入完成）
+================================================
+
+当前状态：音乐已接入 ✅
+   · 文件位置：assets/bgm.m4a
+   · 代码引用：js/bgm.js 里 BGM_SRC = 'assets/bgm.m4a'
+   · 播放方式：进入网站自动播放 + 单曲循环（audio 已设 loop）；
+     若浏览器拦截自动播放，首次点击/滑动/按键/触摸立即播放
+   · 开关：右下角音乐按钮可随时暂停/继续
+
+说明：该文件是您放到工作区根目录的 20260815_000917.m4a（约 2:55），
+      我把它移动到 assets/ 并命名为 bgm.m4a（m4a/AAC 浏览器可直接播放）。
+      如需换成别的曲子，直接替换 assets/bgm.m4a 同名文件即可，无需改代码。
+      如需更换新歌：把新文件命名为 bgm.m4a（或 bgm.mp3）放到本文件夹，
+      并告诉我，我会同步修改 js/bgm.js 里的 BGM_SRC 路径。
+      （此前找的免费候选曲 I See You / when i think about you 未采用，
+        链接仍在下方备查，备用可自行下载试听。）
+       · I See You: https://www.free-stock-music.com/download.php?f=barradeen-i-see-you
+       · when i think about you: https://www.free-stock-music.com/download.php?f=barradeen-when-i-think-about-you
+
+音质增强（2026-08-15 完成）：
+   · 原录音高频被滚降（5kHz 比中频低约 18dB）、平均音量 -33dB，听感偏糊偏闷。
+   · 已处理：高通过低音 → 削减 250Hz 中低频 → 提亮 2.8kHz 清晰度 → 补 6kHz 空气感
+     → 轻压缩提升响度 → 限幅防爆音 → 重编码 AAC 194kbps
+   · 处理后：平均音量 -22dB、峰值 -1.0dB（安全）、时长不变 2:55
+   · 原文件备份：_audio_tmp\bgm.original.m4a（确认满意后可删除 _audio_tmp 文件夹）
+
+降噪处理（2026-09-01 完成）：
+   · 背景音乐噪音偏大，已用 ffmpeg afftdn（FFT 降噪）重新处理。
+   · 处理链：afftdn 降噪(nf=-40/nr=16) → 高通 28Hz → 提升 6dB 响度 → 限幅防爆音 → AAC 192kbps
+   · 效果对比（静音段底噪，越低越干净）：
+      旧增强版   Noise floor -40.4dB / RMS -49.9dB
+      新降噪版   Noise floor -53.2dB / RMS -60.3dB   （底噪降低约 13dB）
+   · 全曲平均响度：-22.2dB → -26.8dB（作为背景音乐更柔和安静，峰值 -0.4dB 安全）
+   · 新版已替换为 assets/bgm.m4a（并给 js/bgm.js 加了 ?v=20260901 版本号防缓存）
+   · 旧增强版备份：_audio_tmp\bgm_enhanced_backup_v2.2.m4a
